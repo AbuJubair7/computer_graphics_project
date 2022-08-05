@@ -67,8 +67,6 @@ void collision(int value)
 
 void boat(){
 
-    glPushMatrix();
-    glTranslated(boatPosition, 0.0f, 0.0f);
     //1st boat
     //small quad
     glBegin(GL_QUADS);
@@ -114,7 +112,6 @@ void boat(){
     glVertex2f(0.36f, 0.2f);    // x, y
 
     glEnd();
-    glPopMatrix();
 }
 
 void boatMove(int v){
@@ -162,8 +159,11 @@ void display() {
     glTranslated(cloudPosition, 0.0f, 0.0f);
     clouds();
     glPopMatrix();
-
+    
+    glPushMatrix();
+    glTranslated(boatPosition, 0.0f, 0.0f);
     boat();
+    glPopMatrix();
     
     glPushMatrix();
     glTranslated(baymaxPosition, 0.0f, 0.0f);
