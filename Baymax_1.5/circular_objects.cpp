@@ -12,6 +12,9 @@ GLfloat ballPosition = 0.0f;
 GLfloat ballY = 0.0f;
 GLfloat ballSpeed = 0.1f;
 
+GLfloat sunPosition = 0.0f;
+GLfloat sunSpeed = 0.002f;
+
 GLfloat cloudPosition = 0.0f;
 GLfloat cloudSpeed = 0.002f;
 
@@ -43,7 +46,7 @@ void Sun()
 {
     int i;
 
-    GLfloat p1= 0.5f;
+    GLfloat p1= 0.45f;
     GLfloat q1= 0.8f;
     GLfloat r1 = 0.08f;
     int tringle2=40;

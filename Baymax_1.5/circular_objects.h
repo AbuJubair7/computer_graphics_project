@@ -9,6 +9,7 @@
 #include <GLUT/glut.h>
 #else
 #include <GL/glut.h>
+#include <windows.h>
 #endif
 #ifndef CIRCULAR_OBJECTS_H
 #define CIRCULAR_OBJECTS_H
@@ -20,6 +21,9 @@
 extern GLfloat ballPosition;
 extern GLfloat ballY;
 extern GLfloat ballSpeed;
+
+extern GLfloat sunPosition;
+extern GLfloat sunSpeed;
 
 extern GLfloat cloudPosition;
 extern GLfloat cloudSpeed;

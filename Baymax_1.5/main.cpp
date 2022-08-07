@@ -13,6 +13,7 @@
 #include <GLUT/glut.h>
 #else
 #include <GL/glut.h>
+#include <windows.h>
 #endif
 #include<math.h>
 #include <iostream>
@@ -38,6 +39,15 @@ void cloudMove(int v)
 
     glutPostRedisplay();
     glutTimerFunc(100, cloudMove, 0);
+}
+
+void sunMove(int v){
+    if(sunPosition < -0.58f){
+        sunPosition = 0.28f;
+    }
+    sunPosition -= sunSpeed;
+    glutPostRedisplay();
+    glutTimerFunc(100, sunMove, 0);
 }
 
 // v = (1/2)gt^2;
@@ -143,17 +153,22 @@ void display() {
     glClear(GL_COLOR_BUFFER_BIT);
 
     putDiv1();
+    glPushMatrix();
+    glTranslatef(0.0f, sunPosition, 0);
+    Sun();
+    glPopMatrix();
     //..... houses..............
     putAllHouses(); // check housses.cpp file to edit houses
     //..........................
+
     putDiv2();
     putDiv3();
     putDiv4();
 
     //field
     putField();
-
-    Sun();
+    
+    
     
     glPushMatrix();
     glTranslated(cloudPosition, 0.0f, 0.0f);
@@ -183,6 +198,14 @@ void display() {
     glFlush();  // Render now
 }
 
+void controlKey(unsigned char key, int kX, int kY){
+   
+    if(key == 'r'){
+        baymaxPosition = 0.0f;
+        ballPosition = 0.0f;
+    }
+}
+
 
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
@@ -193,6 +216,8 @@ int main(int argc, char** argv) {
     glutTimerFunc(100, cloudMove, 0);
     glutTimerFunc(100, boatMove, 0);
     glutTimerFunc(100, collision, 0);
+    glutTimerFunc(100, sunMove, 0);
+    glutKeyboardFunc(controlKey);
     glutMainLoop();
     
   

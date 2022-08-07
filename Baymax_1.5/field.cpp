@@ -9,6 +9,7 @@
 #include <GLUT/glut.h>
 #else
 #include <GL/glut.h>
+#include <windows.h>
 #endif
 #include "field.h"
 #include "circular_objects.h"

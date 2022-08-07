@@ -5,7 +5,12 @@
 //  Created by Abu Jubair on 5/8/22.
 //
 
+#ifdef __APPLE__
 #include <GLUT/glut.h>
+#else
+#include <GL/glut.h>
+#include <windows.h>
+#endif
 #include "houses.h"
 
 void putAllHouses(){

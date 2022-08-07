@@ -13,6 +13,7 @@
 #include <GLUT/glut.h>
 #else
 #include <GL/glut.h>
+#include <windows.h>
 #endif
 #define PI  3.141516
 

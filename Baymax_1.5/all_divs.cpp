@@ -9,6 +9,7 @@
 #include <GLUT/glut.h>
 #else
 #include <GL/glut.h>
+#include <windows.h>
 #endif
 #include "all_divs.h"
 
