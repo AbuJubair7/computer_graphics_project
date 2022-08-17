@@ -15,6 +15,7 @@
 		2DE9F49B289CD707008038D6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F49A289CD707008038D6 /* main.cpp */; };
 		2DE9F4A3289CD715008038D6 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE9F4A2289CD715008038D6 /* GLUT.framework */; };
 		2DE9F4A5289CD71A008038D6 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE9F4A4289CD71A008038D6 /* OpenGL.framework */; };
+		C11D3CD728AAC6E8002221C8 /* gallery.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C11D3CD528AAC6E8002221C8 /* gallery.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +45,8 @@
 		2DE9F49A289CD707008038D6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		2DE9F4A2289CD715008038D6 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		2DE9F4A4289CD71A008038D6 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		C11D3CD528AAC6E8002221C8 /* gallery.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gallery.cpp; sourceTree = "<group>"; };
+		C11D3CD628AAC6E8002221C8 /* gallery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gallery.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				2D4276C1289D71BC003CBF52 /* field.h */,
 				2D4276C3289D7413003CBF52 /* all_divs.cpp */,
 				2D4276C4289D7413003CBF52 /* all_divs.h */,
+				C11D3CD528AAC6E8002221C8 /* gallery.cpp */,
+				C11D3CD628AAC6E8002221C8 /* gallery.h */,
 			);
 			path = Baymax_1.5;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 			files = (
 				2D4276B9289D6020003CBF52 /* houses.cpp in Sources */,
 				2D4276BC289D61D1003CBF52 /* baymax.cpp in Sources */,
+				C11D3CD728AAC6E8002221C8 /* gallery.cpp in Sources */,
 				2DE9F49B289CD707008038D6 /* main.cpp in Sources */,
 				2D4276C5289D7413003CBF52 /* all_divs.cpp in Sources */,
 				2D4276BF289D7014003CBF52 /* circular_objects.cpp in Sources */,
