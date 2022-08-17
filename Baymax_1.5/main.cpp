@@ -40,11 +40,35 @@ void cloudMove(int v)
     glutPostRedisplay();
     glutTimerFunc(100, cloudMove, 0);
 }
-
+// 234 164 75 (R, G, B) for gradient
 void sunMove(int v){
     if(sunPosition < -0.58f){
         sunPosition = 0.28f;
+        skyRed = 130;
+        skyGreen = 211;
+        skyBlue = 240;
+        
+        sunRed = 252;
+        sunGreen = 180;
+        sunBlue = 13;
     }
+    
+    if(sunPosition < -0.25f){
+        if(sunRed > 213) sunRed -= 1;
+        if(sunGreen > 78) sunGreen -= 2;
+        if(sunBlue > 18) sunBlue -= 5;
+        
+        if(skyRed < 234){
+            skyRed += 5;
+        }
+        if(skyGreen > 164){
+            skyGreen -= 5;
+        }
+        if(skyBlue > 74){
+            skyBlue -= 5;
+        }
+    }
+    
     sunPosition -= sunSpeed;
     glutPostRedisplay();
     glutTimerFunc(100, sunMove, 0);
@@ -59,9 +83,6 @@ void collision(int value)
 
         if(ballPosition < 0.8){
             ballPosition += ballSpeed;
-            if(ballY > 0.0f){
-                ballY = 0.0f;
-            }else ballY = 0.1f;
         }else{
             ballPosition = 0.8f;
         }
@@ -153,6 +174,8 @@ void display() {
     glClear(GL_COLOR_BUFFER_BIT);
 
     putDiv1();
+    
+    
     glPushMatrix();
     glTranslatef(0.0f, sunPosition, 0);
     Sun();
@@ -161,9 +184,21 @@ void display() {
     putAllHouses(); // check housses.cpp file to edit houses
     //..........................
 
+    
     putDiv2();
     putDiv3();
     putDiv4();
+    
+    
+    // putting trees
+    putTrees(0.6f); // 1
+    putTrees(0.63f); // 3
+    putTrees(0.58f); // 3
+    putTrees(-0.5f); // 3
+    putTrees(-0.52f); // 2
+    putTrees(-0.55f); // 3
+    
+    //........
 
     //field
     putField();

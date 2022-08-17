@@ -21,9 +21,14 @@
 extern GLfloat ballPosition;
 extern GLfloat ballY;
 extern GLfloat ballSpeed;
+extern GLfloat spin;
+extern GLfloat spin_speed;
 
 extern GLfloat sunPosition;
 extern GLfloat sunSpeed;
+extern int sunRed;
+extern int sunGreen;
+extern int sunBlue;
 
 extern GLfloat cloudPosition;
 extern GLfloat cloudSpeed;
