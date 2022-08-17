@@ -11,9 +11,14 @@
 GLfloat ballPosition = 0.0f;
 GLfloat ballY = 0.0f;
 GLfloat ballSpeed = 0.1f;
+GLfloat spin = 0.0;
+GLfloat spin_speed = 5.0;
 
 GLfloat sunPosition = 0.0f;
 GLfloat sunSpeed = 0.002f;
+int sunRed = 252;
+int sunGreen = 180;
+int sunBlue = 13;
 
 GLfloat cloudPosition = 0.0f;
 GLfloat cloudSpeed = 0.002f;
@@ -54,7 +59,7 @@ void Sun()
     GLfloat tp2 =2.0f * PI;
 
     glBegin (GL_TRIANGLE_FAN);
-    glColor3ub ( 252,180,13);
+    glColor3ub ( sunRed,sunGreen,sunBlue);
     glVertex2f (p1,q1);
     for(i= 0;i<=tringle2; i++)
     {
@@ -91,6 +96,16 @@ void ball(){
 
     }
     glEnd ();
+    
+    // external design (check)
+    // main design will be replaced
+    glBegin(GL_LINES);
+    glLineWidth(7);
+    glColor3f(1.0f, 0.0f, 0.0f);
+    glVertex2f(-0.06f, -0.35f);
+    glVertex2f(0.06f, -0.35f);
+    glEnd();
+    //.....................
    
 }
 
