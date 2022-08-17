@@ -19,8 +19,8 @@ void putField(){
     glBegin(GL_QUADS);
     glColor3ub(167,187,75);
 
-    glVertex2f(-0.85f, 0.0f);    // x, y
-    glVertex2f(-0.97f, -0.9f);    // x, y
+    glVertex2f(-0.65f, 0.0f);    // x, y
+    glVertex2f(-0.77f, -0.9f);    // x, y
     glVertex2f(0.97f, -0.9f);    // x, y
     glVertex2f(0.85f, 0.0f);    // x, y
 
@@ -52,18 +52,18 @@ void putField(){
 
     glEnd();
 
-    //left side line
-    glBegin(GL_LINES);
-    glColor3f(1.0f, 1.0f, 1.0f);
-
-    glVertex2f(-0.6f, -0.1f);    // x, y
-    glVertex2f(-0.6f, -0.8f);    // x, y
-    glVertex2f(-0.6f, -0.1f);    // x, y
-    glVertex2f(-0.86f, -0.1f);    // x, y
-    glVertex2f(-0.6f, -0.8f);    // x, y
-    glVertex2f(-0.96f, -0.8f);    // x, y
-
-    glEnd();
+//    //left side line
+//    glBegin(GL_LINES);
+//    glColor3f(1.0f, 1.0f, 1.0f);
+//
+//    glVertex2f(-0.6f, -0.1f);    // x, y
+//    glVertex2f(-0.6f, -0.8f);    // x, y
+//    glVertex2f(-0.6f, -0.1f);    // x, y
+//    glVertex2f(-0.86f, -0.1f);    // x, y
+//    glVertex2f(-0.6f, -0.8f);    // x, y
+//    glVertex2f(-0.96f, -0.8f);    // x, y
+//
+//    glEnd();
 
     //right goalPost
     glBegin(GL_LINES);
@@ -74,14 +74,14 @@ void putField(){
 
     glEnd();
 
-    //left goalPost
-    glBegin(GL_LINES);
-    glColor3f(1.0f, 1.0f, 1.0f);
-
-    glVertex2f(-0.89f, -0.72f);    // x, y
-    glVertex2f(-1.0f, -0.72f);    // x, y
-//    glVertex2f(-0.89f, -0.22f);    // x, y
-//    glVertex2f(-1.0f, -0.22f);    // x, y
-
-    glEnd();
+//    //left goalPost
+//    glBegin(GL_LINES);
+//    glColor3f(1.0f, 1.0f, 1.0f);
+//
+//    glVertex2f(-0.89f, -0.72f);    // x, y
+//    glVertex2f(-1.0f, -0.72f);    // x, y
+////    glVertex2f(-0.89f, -0.22f);    // x, y
+////    glVertex2f(-1.0f, -0.22f);    // x, y
+//
+//    glEnd();
 }

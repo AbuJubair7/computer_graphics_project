@@ -22,6 +22,7 @@
 #include "circular_objects.h"
 #include "field.h"
 #include "all_divs.h"
+#include "gallery.h"
 
 #define PI  3.141516
 
@@ -191,7 +192,7 @@ void display() {
     glPopMatrix();
 
 
-
+    putGallery();
     //putDiv5();
 
 
