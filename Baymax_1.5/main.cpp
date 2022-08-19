@@ -84,8 +84,11 @@ void collision(int value)
 
         if(ballPosition < 0.8){
             ballPosition += ballSpeed;
+            if(ballY > 0.0f){
+                ballY = 0.0f;
+            }else ballY = 0.1f;
         }else{
-            ballPosition = 0.8f;
+            ballPosition = 0.88f;
         }
 
     }else{
@@ -224,6 +227,7 @@ void display() {
     glPushMatrix();
     glTranslated(ballPosition, ballY, 0.0f);
     ball();
+    //ballDesign();
     glPopMatrix();
 
 
