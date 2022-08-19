@@ -47,6 +47,9 @@ void DrawEllipse(float cx, float cy, float rx, float ry, int num_segments){
     glEnd();
 }
 
+
+
+
 void Sun()
 {
     int i;
@@ -71,6 +74,9 @@ void Sun()
     glEnd ();
 
 }
+
+
+
 
 void ball(){
     int i;
@@ -99,15 +105,60 @@ void ball(){
     
     // external design (check)
     // main design will be replaced
-    glBegin(GL_LINES);
-    glLineWidth(7);
-    glColor3f(1.0f, 0.0f, 0.0f);
-    glVertex2f(-0.06f, -0.35f);
-    glVertex2f(0.06f, -0.35f);
-    glEnd();
-    //.....................
+
+    
+    //ball design
+    //1st
+    glBegin (GL_POLYGON);
+    glColor3ub(0,0,0);
+    
+    glVertex2f(0.0f, -0.33f);
+    glVertex2f(-0.02f, -0.32f);
+    glVertex2f(-0.01f, -0.3f);
+    glVertex2f(0.01f, -0.3f);
+    glVertex2f(0.02f, -0.32f);
+    
+    glEnd ();
+    
+    //2nd
+    glBegin (GL_POLYGON);
+    glColor3ub(0,0,0);
+    
+    glVertex2f(0.0f, -0.37f);
+    glVertex2f(-0.02f, -0.38f);
+    glVertex2f(-0.01f, -0.4f);
+    glVertex2f(0.01f, -0.4f);
+    glVertex2f(0.02f, -0.38f);
+    
+    glEnd ();
+    
+    //3rd
+    glBegin (GL_POLYGON);
+    glColor3ub(0,0,0);
+    
+    glVertex2f(-0.03f, -0.35f);
+    glVertex2f(-0.05f, -0.33f);
+    glVertex2f(-0.06f, -0.34f);
+    glVertex2f(-0.06f, -0.36f);
+    glVertex2f(-0.05f, -0.37f);
+    
+    glEnd ();
+    
+    //4th
+    glBegin (GL_POLYGON);
+    glColor3ub(0,0,0);
+    
+    glVertex2f(0.03f, -0.35f);
+    glVertex2f(0.05f, -0.33f);
+    glVertex2f(0.06f, -0.34f);
+    glVertex2f(0.06f, -0.36f);
+    glVertex2f(0.05f, -0.37f);
+    
+    glEnd ();
    
 }
+
+
 
 
 void Cloud(float p,float q,float r)
@@ -133,7 +184,6 @@ void Cloud(float p,float q,float r)
     }
     glEnd ();
    
-
 }
 
 

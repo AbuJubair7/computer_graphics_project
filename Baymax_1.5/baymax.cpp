@@ -21,7 +21,17 @@ void putBaymax(){
     int tringle4=40;
 
     GLfloat tp4 =2.0f * PI  ;
+    
+    
+    //for eye
+    GLfloat p4= -0.395f;
+    GLfloat q4= 0.04f;
+    GLfloat r4= 0.006f;
+    int tringle5=40;
 
+    GLfloat tp5 =2.0f * PI  ;
+    
+    
     //for ghar
     GLfloat p2= -0.425f;
     GLfloat q2= -0.04f;
@@ -57,6 +67,33 @@ void putBaymax(){
     }
     glEnd ();
 
+    
+    //eye
+    glBegin (GL_TRIANGLE_FAN);
+    glColor3ub(0,0,0);
+    glVertex2f (p4,q4);
+    for(i= 0;i<=tringle5; i++)
+    {
+        glVertex2f (
+                    p4+(r4*cos(i*tp5/tringle5)),
+                    q4+(r4*sin(i*tp5/tringle5))
+                    );
+
+
+    }
+    glEnd ();
+
+    
+    //nose
+    glBegin(GL_LINES);
+    glColor3ub(0,0,0);
+
+    glVertex2f(-0.385f, 0.04f);    // x, y
+    glVertex2f(-0.38f, 0.04f);    // x, y
+
+    glEnd();
+    
+    
     //ghar
     glBegin (GL_TRIANGLE_FAN);
     glColor3ub(255,255,255);
@@ -72,6 +109,7 @@ void putBaymax(){
     }
     glEnd ();
 
+    
     //vurir opr e
     glBegin(GL_QUADS);
     glColor3ub(255,255,255);
@@ -83,6 +121,7 @@ void putBaymax(){
 
     glEnd();
 
+    
     //vuri
     glBegin (GL_TRIANGLE_FAN);
     glColor3ub(255,255,255);
@@ -98,9 +137,57 @@ void putBaymax(){
     }
     glEnd ();
 
+    
+    //hand
+    glBegin(GL_QUADS);
+    glColor3ub(240,240,240);
+
+    glVertex2f(-0.4f, -0.05f);    // x, y
+    glVertex2f(-0.405f, -0.25f);    // x, y
+    glVertex2f(-0.435f, -0.25f);    // x, y
+    glVertex2f(-0.44f, -0.05f);    // x, y
+
+    glEnd();
+    
+    
+    //1st finger
+    glBegin(GL_QUADS);
+    glColor3ub(240,240,240);
+
+    glVertex2f(-0.41f, -0.25f);    // x, y
+    glVertex2f(-0.41f, -0.275f);    // x, y
+    glVertex2f(-0.415f, -0.275f);    // x, y
+    glVertex2f(-0.415f, -0.25f);    // x, y
+
+    glEnd();
+    
+    
+    //2nd finger
+    glBegin(GL_QUADS);
+    glColor3ub(240,240,240);
+
+    glVertex2f(-0.42f, -0.25f);    // x, y
+    glVertex2f(-0.42f, -0.275f);    // x, y
+    glVertex2f(-0.425f, -0.275f);    // x, y
+    glVertex2f(-0.425f, -0.25f);    // x, y
+
+    glEnd();
+    
+    
+    //3rd finger
+    glBegin(GL_QUADS);
+    glColor3ub(240,240,240);
+
+    glVertex2f(-0.428f, -0.25f);    // x, y
+    glVertex2f(-0.428f, -0.275f);    // x, y
+    glVertex2f(-0.432f, -0.275f);    // x, y
+    glVertex2f(-0.432f, -0.25f);    // x, y
+
+    glEnd();
+    
     //leg
     glBegin(GL_QUADS);
-    glColor3ub(255,255,255);
+    glColor3ub(240,240,240);
 
     glVertex2f(-0.46f, -0.3f);    // x, y
     glVertex2f(-0.45f, -0.4f);    // x, y
@@ -109,6 +196,5 @@ void putBaymax(){
 
     glEnd();
    
-
 }
 

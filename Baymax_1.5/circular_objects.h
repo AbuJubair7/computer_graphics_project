@@ -41,6 +41,8 @@ void DrawEllipse(float cx, float cy, float rx, float ry, int num_segments);
 
 void ball();
 
+//void ballDesign();
+
 void Cloud(float p,float q,float r);
 
 #endif /* circular_objects_hpp */

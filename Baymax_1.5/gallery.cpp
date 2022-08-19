@@ -16,6 +16,7 @@
 void putGallery(){
     
     //lower border
+    //small
     glBegin(GL_QUADS);
     glColor3ub(128,128,128);
 
@@ -26,7 +27,7 @@ void putGallery(){
 
     glEnd();
     
-    
+    //big
     glBegin(GL_QUADS);
     glColor3ub(255,255,255);
 
@@ -36,6 +37,8 @@ void putGallery(){
     glVertex2f(-0.67f,-0.05f);    // x, y
 
     glEnd();
+    
+    
     
     
     //seat
@@ -85,12 +88,12 @@ void putGallery(){
     
     //5th row
     glBegin(GL_QUADS);
-    glColor3ub(150,200,220);
+    glColor3ub(150,200,120);
 
+    glVertex2f(-1.0f, -0.2f);    // x, y
     glVertex2f(-1.0f, -0.29f);    // x, y
-    glVertex2f(-1.0f, -0.29f);    // x, y
-    glVertex2f(-0.73f, 0.14f);    // x, y
-    glVertex2f(-0.74f, 0.13f);    // x, y
+    glVertex2f(-0.76f, 0.11f);    // x, y
+    glVertex2f(-0.77f, 0.13f);    // x, y
 
     glEnd();
     
@@ -98,12 +101,14 @@ void putGallery(){
     glBegin(GL_QUADS);
     glColor3ub(150,200,220);
 
-    glVertex2f(-1.0f, -0.29f);    // x, y
-    glVertex2f(-1.0f, -0.29f);    // x, y
-    glVertex2f(-0.73f, 0.14f);    // x, y
-    glVertex2f(-0.74f, 0.13f);    // x, y
+    glVertex2f(-1.0f, -0.11f);    // x, y
+    glVertex2f(-1.0f, -0.2f);    // x, y
+    glVertex2f(-0.77f, 0.13f);    // x, y
+    glVertex2f(-0.78f, 0.15f);    // x, y
 
     glEnd();
+    
+    
     
     
     //sirir wall
@@ -116,6 +121,8 @@ void putGallery(){
     glVertex2f(-1.0f, -0.7f);    // x, y
 
     glEnd();
+    
+    
     
     
     //way for walk
@@ -137,11 +144,8 @@ void putGallery(){
     
     
    
-    
-    
 
-    
-    //upper wall lower up quads
+    //upper sirir wall
     glBegin(GL_QUADS);
     glColor3ub(200,200,220);
 
@@ -153,6 +157,35 @@ void putGallery(){
     glEnd();
     
    
+    
+    
+    //chauni
+    glBegin(GL_QUADS);
+    glColor3ub(220,220,220);
+
+    glVertex2f(-1.0f, -0.35f);    // x, y
+    glVertex2f(-0.9f, -0.35f);    // x, y
+    glVertex2f(-0.68f, 0.2f);    // x, y
+    glVertex2f(-1.0f, 0.2f);    // x, y
+
+    glEnd();
+    
+    
+    
+    
+    //chaunir handle
+    glBegin(GL_LINES);
+    glColor3ub(220,220,220);
+
+    glVertex2f(-0.88f, -0.3f);    // x, y
+    glVertex2f(-0.88f, -0.52f);    // x, y
+    
+    glVertex2f(-0.71f, 0.15f);    // x, y
+    glVertex2f(-0.71f, -0.1f);    // x, y
+
+    glEnd();
+    
+    
     
     
     //grill
