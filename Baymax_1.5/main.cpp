@@ -43,15 +43,16 @@ void cloudMove(int v)
 }
 // 234 164 75 (R, G, B) for gradient
 void sunMove(int v){
+     // optional
     if(sunPosition < -0.58f){
-        sunPosition = 0.28f;
-        skyRed = 130;
-        skyGreen = 211;
-        skyBlue = 240;
-        
-        sunRed = 252;
-        sunGreen = 180;
-        sunBlue = 13;
+        sunPosition = -0.58f;
+//        skyRed = 130;
+//        skyGreen = 211;
+//        skyBlue = 240;
+//
+//        sunRed = 252;
+//        sunGreen = 180;
+//        sunBlue = 13;
     }
     
     if(sunPosition < -0.25f){
@@ -148,6 +149,46 @@ void boat(){
 
     glEnd();
 }
+void putWaterEffect(){
+    // for first boat
+    glBegin(GL_LINES);
+    glColor3f(1.0f, 1.0f, 1.0f);
+    glVertex2f(-0.5001f, 0.17f);
+    glVertex2f(-0.51f, 0.17f);
+    glEnd();
+    
+    glBegin(GL_LINES);
+    glColor3f(1.0f, 1.0f, 1.0f);
+    glVertex2f(-0.5002f, 0.16f);
+    glVertex2f(-0.52f, 0.16f);
+    glEnd();
+    
+    glBegin(GL_LINES);
+    glColor3f(1.0f, 1.0f, 1.0f);
+    glVertex2f(-0.5002f, 0.18f);
+    glVertex2f(-0.52f, 0.18f);
+    glEnd();
+    
+    // for second boat
+    glBegin(GL_LINES);
+    glColor3f(1.0f, 1.0f, 1.0f);
+    glVertex2f(0.5001f, 0.17f);
+    glVertex2f(0.51f, 0.17f);
+    glEnd();
+    
+    glBegin(GL_LINES);
+    glColor3f(1.0f, 1.0f, 1.0f);
+    glVertex2f(0.5002f, 0.16f);
+    glVertex2f(0.52f, 0.16f);
+    glEnd();
+    
+    glBegin(GL_LINES);
+    glColor3f(1.0f, 1.0f, 1.0f);
+    glVertex2f(0.5002f, 0.18f);
+    glVertex2f(0.52f, 0.18f);
+    glEnd();
+    
+}
 
 void boatMove(int v){
 
@@ -217,7 +258,10 @@ void display() {
     glPushMatrix();
     glTranslated(boatPosition, 0.0f, 0.0f);
     boat();
+    putWaterEffect();
     glPopMatrix();
+    
+    putBridge();
     
     glPushMatrix();
     glTranslated(baymaxPosition, 0.0f, 0.0f);
@@ -243,6 +287,15 @@ void controlKey(unsigned char key, int kX, int kY){
     if(key == 'r'){
         baymaxPosition = 0.0f;
         ballPosition = 0.0f;
+    }else if(key == 's'){
+        sunPosition = 0.28f;
+        skyRed = 130;
+        skyGreen = 211;
+        skyBlue = 240;
+
+        sunRed = 252;
+        sunGreen = 180;
+        sunBlue = 13;
     }
 }
 

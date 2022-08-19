@@ -103,3 +103,55 @@ void putTrees(float x){
        glVertex2f(((x2+0.03) + (x-0.03))/2, 0.45f);
        glEnd();
 }
+
+void putBridge(){
+    // 110, 74, 49
+    // max = 0.27f;
+    // min = 0.1f;
+    
+    // first part
+    glBegin(GL_QUADS);
+    glColor3ub(110, 74, 49);
+    
+    glVertex2f(0.6f, 0.27f); // top-left
+    glVertex2f(0.65f, 0.27f); // top right
+    glVertex2f(0.72f, 0.1667f); // bottom-right
+    glVertex2f(0.67f, 0.1667f); // bottom left
+    glEnd();
+    
+    // second part
+    glBegin(GL_QUADS);
+    glColor3ub(110, 74, 49);
+    
+    glVertex2f(0.67f, 0.1667f); // top-left
+    glVertex2f(0.72f, 0.1667f); // top right
+    glVertex2f(0.73f, 0.1f); // bottom-right
+    glVertex2f(0.68f, 0.1f); // bottom left
+    glEnd();
+    
+    // piller
+    // 1
+    glBegin(GL_LINES);
+    glColor3f(0.0f, 0.0f, 0.0f);
+    
+    glVertex2f(0.67f, 0.1667f);
+    glVertex2f(0.67f, 0.12f);
+    glEnd();
+    //2
+    glBegin(GL_LINES);
+    glColor3f(0.0f, 0.0f, 0.0f);
+    
+    glVertex2f(0.64f, 0.21f);
+    glVertex2f(0.64f, 0.18f);
+    glEnd();
+    
+    //3
+    glBegin(GL_LINES);
+    glColor3f(0.0f, 0.0f, 0.0f);
+    
+    glVertex2f(0.62f, 0.24f);
+    glVertex2f(0.62f, 0.22f);
+    glEnd();
+    
+    
+}

@@ -19,5 +19,6 @@ void putDiv3();
 void putDiv4();
 void putDiv5();
 void putTrees(float x);
+void putBridge();
 
 #endif /* all_divs_hpp */
