@@ -24,11 +24,11 @@
 #include "all_divs.h"
 #include "gallery.h"
 #include "wave.h"
-
+#include "goal_post.h"
+#include "plane.h"
 #define PI  3.141516
 
 using namespace std;
-
 
 GLfloat boatPosition = 0.0f;
 GLfloat boatSpeed = 0.004f;
@@ -89,7 +89,7 @@ void collision(int value)
                 ballY = 0.0f;
             }else ballY = 0.1f;
         }else{
-            ballPosition = 0.88f;
+            ballPosition = 0.935f;
         }
 
     }else{
@@ -202,19 +202,19 @@ void display() {
     
     
     // putting trees
-    putTrees(0.6f); // 1
-    putTrees(0.63f); // 3
-    putTrees(0.58f); // 3
+    putTrees(0.68f); // 1
+    putTrees(0.71f); // 3
+    putTrees(0.66f); // 3
     putTrees(-0.5f); // 3
     putTrees(-0.52f); // 2
     putTrees(-0.55f); // 3
-    
-    //........
-
+    putTrees(0.5f); // 1
+    putTrees(0.52f); // 3
+    putTrees(0.55f); // 3
     //field
     putField();
     
-    
+    putPlane();
     
     glPushMatrix();
     glTranslated(cloudPosition, 0.0f, 0.0f);
@@ -251,6 +251,7 @@ void display() {
     putGallery();
     //putDiv5();
 
+    putGoalPost();
 
     glFlush();  // Render now
 }
