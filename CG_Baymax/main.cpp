@@ -35,6 +35,9 @@ GLfloat boatSpeed = 0.004f;
 
 GLfloat waterEffectX = 0.0f;
 
+GLfloat planePosition = 0.40f;
+int canPlaneMove = 0;
+
 int sunDown = 0;
 int kick = 0;
 
@@ -74,6 +77,22 @@ void sunMove(int v){
     if(sunDown)  sunPosition -= sunSpeed;
     glutPostRedisplay();
     glutTimerFunc(1000.0f/60.0f, sunMove, 0);
+}
+
+void planeMove(int v){
+
+    if(planePosition > -1.85){
+        if(canPlaneMove){
+            planePosition -= 0.06;
+        }
+    }else {
+        canPlaneMove = 0;
+        planePosition =0.40f;
+    }
+    
+    glutPostRedisplay();
+    glutTimerFunc(1000.0f/ 60.0f, planeMove, 0);
+        
 }
 
 // v = (1/2)gt^2;
@@ -240,7 +259,10 @@ void display() {
     //field
     putField();
     
+    glPushMatrix();
+    glTranslated(planePosition, 0, 0);
     putPlane();
+    glPopMatrix();
     
     glPushMatrix();
     glTranslated(cloudPosition, 0.0f, 0.0f);
@@ -300,6 +322,8 @@ void controlKey(unsigned char key, int kX, int kY){
         sunDown = sunDown ? 0 : 1;
     }else if(key == 'k'){
         kick = kick ? 0 : 1;
+    }else if(key == 'p'){
+        canPlaneMove = canPlaneMove ? 0 : 1;
     }
 }
 
@@ -315,9 +339,10 @@ int main(int argc, char** argv) {
     glutTimerFunc(1000.0f/60.0f, boatMove, 0);
     glutTimerFunc(1000.0f/60.0f, collision, 0);
     glutTimerFunc(1000.0f/60.0f, sunMove, 0);
-    glutTimerFunc(100, waterMove, 0);
+    glutTimerFunc(1000.0f/60.0f, planeMove, 0);
+    glutTimerFunc(1000.0f/60.0f, waterMove, 0);
     glutKeyboardFunc(controlKey);
-  //  gluOrtho2D(-1,365,-200,200);
+    
     glutMainLoop();
     
   
