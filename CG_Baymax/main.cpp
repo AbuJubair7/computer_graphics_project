@@ -205,12 +205,38 @@ void display() {
     putTrees(0.68f); // 1
     putTrees(0.71f); // 3
     putTrees(0.66f); // 3
+    
     putTrees(-0.5f); // 3
     putTrees(-0.52f); // 2
     putTrees(-0.55f); // 3
+    
     putTrees(0.5f); // 1
     putTrees(0.52f); // 3
     putTrees(0.55f); // 3
+    
+    putTrees(0.95f); // 1
+    putTrees(0.92f); // 3
+    putTrees(0.97f); // 3
+    
+    putTrees(-0.15f); // 1
+    putTrees(-0.12f); // 3
+    putTrees(-0.1f); // 3
+    
+    putTrees(-0.03f); // 1
+    putTrees(-0.05f); // 3
+    
+    putTrees(-0.7f); // 3
+    putTrees(-0.67f); // 2
+    putTrees(-0.65f); // 3
+    
+    putTrees(-0.6f); // 2
+   
+    putTrees(-0.95f); // 3
+    putTrees(-0.97f); // 3
+    
+    
+    
+    
     //field
     putField();
     

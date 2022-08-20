@@ -27,13 +27,12 @@ void putField(){
 
     glEnd();
 
+    
+    
     //middle line
     glBegin(GL_LINES);
     glColor3f(0.9f, 1.0f, 1.0f);
     
-//    glEnable(GL_LINE_WIDTH);
-//    glLineWidth(10);
-
     glVertex2f(0.0f, 0.0f);    // x, y
     glVertex2f(0.0f, -0.9f);    // x, y
 
@@ -68,6 +67,26 @@ void putField(){
     glVertex2f(0.6f, -0.8f);    // x, y
     glVertex2f(0.96f, -0.8f);    // x, y
 
+    glEnd();
+    
+    
+    
+    //field outline
+    glBegin(GL_LINES);
+    glColor3ub(255,255,255);
+
+    glVertex2f(-0.65f, 0.0f);    // x, y
+    glVertex2f(-0.77f, -0.9f);    // x, y
+    
+    glVertex2f(0.97f, -0.9f);    // x, y
+    glVertex2f(0.85f, 0.0f);    // x, y
+
+    glVertex2f(-0.65f, 0.0f);
+    glVertex2f(0.85f, 0.0f);
+    
+    glVertex2f(-0.77f, -0.9f);    // x, y
+    glVertex2f(0.97f, -0.9f);    // x, y
+    
     glEnd();
     
 }
