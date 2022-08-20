@@ -12,6 +12,7 @@
 		2D4276BF289D7014003CBF52 /* circular_objects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D4276BD289D7014003CBF52 /* circular_objects.cpp */; };
 		2D4276C2289D71BC003CBF52 /* field.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D4276C0289D71BC003CBF52 /* field.cpp */; };
 		2D4276C5289D7413003CBF52 /* all_divs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D4276C3289D7413003CBF52 /* all_divs.cpp */; };
+		2D608AFF28AFF8C300902767 /* wave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D608AFD28AFF8C300902767 /* wave.cpp */; };
 		2DE9F49B289CD707008038D6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F49A289CD707008038D6 /* main.cpp */; };
 		2DE9F4A3289CD715008038D6 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE9F4A2289CD715008038D6 /* GLUT.framework */; };
 		2DE9F4A5289CD71A008038D6 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE9F4A4289CD71A008038D6 /* OpenGL.framework */; };
@@ -41,6 +42,8 @@
 		2D4276C1289D71BC003CBF52 /* field.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = field.h; sourceTree = "<group>"; };
 		2D4276C3289D7413003CBF52 /* all_divs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = all_divs.cpp; sourceTree = "<group>"; };
 		2D4276C4289D7413003CBF52 /* all_divs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = all_divs.h; sourceTree = "<group>"; };
+		2D608AFD28AFF8C300902767 /* wave.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wave.cpp; sourceTree = "<group>"; };
+		2D608AFE28AFF8C300902767 /* wave.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wave.h; sourceTree = "<group>"; };
 		2DE9F497289CD707008038D6 /* Baymax_1.5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Baymax_1.5; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE9F49A289CD707008038D6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		2DE9F4A2289CD715008038D6 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
@@ -95,6 +98,8 @@
 				2D4276C4289D7413003CBF52 /* all_divs.h */,
 				C11D3CD528AAC6E8002221C8 /* gallery.cpp */,
 				C11D3CD628AAC6E8002221C8 /* gallery.h */,
+				2D608AFD28AFF8C300902767 /* wave.cpp */,
+				2D608AFE28AFF8C300902767 /* wave.h */,
 			);
 			path = Baymax_1.5;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 				2D4276BC289D61D1003CBF52 /* baymax.cpp in Sources */,
 				C11D3CD728AAC6E8002221C8 /* gallery.cpp in Sources */,
 				2DE9F49B289CD707008038D6 /* main.cpp in Sources */,
+				2D608AFF28AFF8C300902767 /* wave.cpp in Sources */,
 				2D4276C5289D7413003CBF52 /* all_divs.cpp in Sources */,
 				2D4276BF289D7014003CBF52 /* circular_objects.cpp in Sources */,
 				2D4276C2289D71BC003CBF52 /* field.cpp in Sources */,
