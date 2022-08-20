@@ -23,6 +23,7 @@
 #include "field.h"
 #include "all_divs.h"
 #include "gallery.h"
+#include "wave.h"
 #include "goal_post.h"
 #include "plane.h"
 #define PI  3.141516
@@ -32,6 +33,11 @@ using namespace std;
 GLfloat boatPosition = 0.0f;
 GLfloat boatSpeed = 0.004f;
 
+GLfloat waterEffectX = 0.0f;
+
+int sunDown = 0;
+int kick = 0;
+
 void cloudMove(int v)
 {
     if(cloudPosition >= 1.5)
@@ -39,20 +45,14 @@ void cloudMove(int v)
     else cloudPosition += cloudSpeed;
 
     glutPostRedisplay();
-    glutTimerFunc(100, cloudMove, 0);
+    glutTimerFunc(1000.0f/60.0f, cloudMove, 0);
 }
 // 234 164 75 (R, G, B) for gradient
 void sunMove(int v){
      // optional
     if(sunPosition < -0.58f){
         sunPosition = -0.58f;
-//        skyRed = 130;
-//        skyGreen = 211;
-//        skyBlue = 240;
-//
-//        sunRed = 252;
-//        sunGreen = 180;
-//        sunBlue = 13;
+
     }
     
     if(sunPosition < -0.25f){
@@ -71,9 +71,9 @@ void sunMove(int v){
         }
     }
     
-    sunPosition -= sunSpeed;
+    if(sunDown)  sunPosition -= sunSpeed;
     glutPostRedisplay();
-    glutTimerFunc(100, sunMove, 0);
+    glutTimerFunc(1000.0f/60.0f, sunMove, 0);
 }
 
 // v = (1/2)gt^2;
@@ -93,11 +93,11 @@ void collision(int value)
         }
 
     }else{
-        baymaxPosition += baymaxSpeed;
+        if(kick) baymaxPosition += baymaxSpeed;
     }
 
     glutPostRedisplay();
-    glutTimerFunc(100, collision, 0);
+    glutTimerFunc(1000.0f/60.0f, collision, 0);
 }
 
 
@@ -149,55 +149,21 @@ void boat(){
 
     glEnd();
 }
-void putWaterEffect(){
-    // for first boat
-    glBegin(GL_LINES);
-    glColor3f(1.0f, 1.0f, 1.0f);
-    glVertex2f(-0.5001f, 0.17f);
-    glVertex2f(-0.51f, 0.17f);
-    glEnd();
-    
-    glBegin(GL_LINES);
-    glColor3f(1.0f, 1.0f, 1.0f);
-    glVertex2f(-0.5002f, 0.16f);
-    glVertex2f(-0.52f, 0.16f);
-    glEnd();
-    
-    glBegin(GL_LINES);
-    glColor3f(1.0f, 1.0f, 1.0f);
-    glVertex2f(-0.5002f, 0.18f);
-    glVertex2f(-0.52f, 0.18f);
-    glEnd();
-    
-    // for second boat
-    glBegin(GL_LINES);
-    glColor3f(1.0f, 1.0f, 1.0f);
-    glVertex2f(0.5001f, 0.17f);
-    glVertex2f(0.51f, 0.17f);
-    glEnd();
-    
-    glBegin(GL_LINES);
-    glColor3f(1.0f, 1.0f, 1.0f);
-    glVertex2f(0.5002f, 0.16f);
-    glVertex2f(0.52f, 0.16f);
-    glEnd();
-    
-    glBegin(GL_LINES);
-    glColor3f(1.0f, 1.0f, 1.0f);
-    glVertex2f(0.5002f, 0.18f);
-    glVertex2f(0.52f, 0.18f);
-    glEnd();
-    
-}
 
 void boatMove(int v){
 
     if(boatPosition >= 1.5)
         boatPosition = -1.5;
     else boatPosition += boatSpeed;
-
+   
     glutPostRedisplay();
-    glutTimerFunc(100, boatMove, 0);
+    glutTimerFunc(1000.0f/60.0f, boatMove, 0);
+}
+
+void waterMove(int v){
+    waterEffectX -= 0.003f;
+    glutPostRedisplay();
+    glutTimerFunc(100, waterMove, 0);
 }
 
 void clouds(){
@@ -255,11 +221,18 @@ void display() {
     clouds();
     glPopMatrix();
     
+    
+    glPushMatrix();
+    glTranslatef(waterEffectX, 0, 0);
+    putWave();
+//    RenderSineWave();
+    glPopMatrix();
+    
     glPushMatrix();
     glTranslated(boatPosition, 0.0f, 0.0f);
     boat();
-    putWaterEffect();
     glPopMatrix();
+    
     
     putBridge();
     
@@ -288,7 +261,7 @@ void controlKey(unsigned char key, int kX, int kY){
     if(key == 'r'){
         baymaxPosition = 0.0f;
         ballPosition = 0.0f;
-    }else if(key == 's'){
+    }else if(key == 'm'){
         sunPosition = 0.28f;
         skyRed = 130;
         skyGreen = 211;
@@ -297,6 +270,10 @@ void controlKey(unsigned char key, int kX, int kY){
         sunRed = 252;
         sunGreen = 180;
         sunBlue = 13;
+    }else if(key == 's'){
+        sunDown = sunDown ? 0 : 1;
+    }else if(key == 'k'){
+        kick = kick ? 0 : 1;
     }
 }
 
@@ -306,12 +283,15 @@ int main(int argc, char** argv) {
     glutInitWindowSize(2560, 1600);
     glutInitWindowPosition(50, 50);
     glutCreateWindow("Translation Animation");
+    
     glutDisplayFunc(display);
-    glutTimerFunc(100, cloudMove, 0);
-    glutTimerFunc(100, boatMove, 0);
-    glutTimerFunc(100, collision, 0);
-    glutTimerFunc(100, sunMove, 0);
+    glutTimerFunc(1000.0f/60.0f, cloudMove, 0);
+    glutTimerFunc(1000.0f/60.0f, boatMove, 0);
+    glutTimerFunc(1000.0f/60.0f, collision, 0);
+    glutTimerFunc(1000.0f/60.0f, sunMove, 0);
+    glutTimerFunc(100, waterMove, 0);
     glutKeyboardFunc(controlKey);
+  //  gluOrtho2D(-1,365,-200,200);
     glutMainLoop();
     
   

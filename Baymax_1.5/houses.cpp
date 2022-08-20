@@ -49,7 +49,7 @@ void putAllHouses(){
 
     glEnd();
 
-    //3rd window- bottom left
+    //3rd window- top left
     glBegin(GL_QUADS);
     glColor3ub(193, 129, 62);
 
@@ -60,7 +60,7 @@ void putAllHouses(){
 
     glEnd();
 
-    //4th window - bottom right
+    //4th window - top right
     glBegin(GL_QUADS);
     glColor3ub(193, 129, 62);
 
@@ -106,7 +106,7 @@ void putAllHouses(){
 
     glEnd();
 
-    //3rd window- bottom left
+    //3rd window- top left
     glBegin(GL_QUADS);
     glColor3ub(210, 145, 59);
 
@@ -117,7 +117,7 @@ void putAllHouses(){
 
     glEnd();
 
-    //4th window - bottom right
+    //4th window - top right
     glBegin(GL_QUADS);
     glColor3ub(210, 145, 59);
 
@@ -129,7 +129,7 @@ void putAllHouses(){
     glEnd();
 
 
-    //3th house
+    //2nd house
     //left side
     glBegin(GL_QUADS);
     glColor3ub(240,229,195);
@@ -144,7 +144,7 @@ void putAllHouses(){
     //1st window
     //botom left
 
- glBegin(GL_QUADS);
+    glBegin(GL_QUADS);
     glColor3ub(0,0,0);
 
     glVertex2f(-0.49f, 0.32f);    // x, y
@@ -171,7 +171,7 @@ void putAllHouses(){
     //3rd window
     //mid right
 
- glBegin(GL_QUADS);
+    glBegin(GL_QUADS);
     glColor3ub(0,0,0);
 
     glVertex2f(-0.44f, 0.40f);    // x, y
@@ -209,7 +209,7 @@ void putAllHouses(){
     glEnd();
 
     //6th window
-    //mid right
+    //top right
 
     glBegin(GL_QUADS);
     glColor3ub(0,0,0);
@@ -312,7 +312,7 @@ void putAllHouses(){
 
 
 
-    //4th house
+    //3rd house
     //right side
     glBegin(GL_QUADS);
     glColor3ub(225,180,75);
@@ -325,72 +325,71 @@ void putAllHouses(){
     glEnd();
 
     //1st window- bottom left
-    glBegin(GL_QUADS);
-    glColor3ub(137, 184, 206);
+        glBegin(GL_QUADS);
+        glColor3ub(184, 124, 54);
 
-    glVertex2f(0.35f, 0.35f);    // x, y
-    glVertex2f(0.31f, 0.35f);    // x, y
-    glVertex2f(0.31f, 0.42f);    // x, y
-    glVertex2f(0.35f, 0.41f);    // x, y
+        glVertex2f(-0.11f, 0.32f);    // x, y
+        glVertex2f(-0.15f, 0.32f);    // x, y
+        glVertex2f(-0.15f, 0.39f);    // x, y
+        glVertex2f(-0.11f, 0.38f);    // x, y
 
-    glEnd();
+        glEnd();
 
-    //2nd window- bottom right
-    glBegin(GL_QUADS);
+        //2nd window- bottom right
+        glBegin(GL_QUADS);
 
-    glColor3ub(137, 184, 206);
+        glColor3ub(184, 124, 54);
 
-    glVertex2f(0.36f, 0.35f);    // x, y
-    glVertex2f(0.4f, 0.35f);    // x, y
-    glVertex2f(0.4f, 0.41f);    // x, y
-    glVertex2f(0.36f, 0.42f);    // x, y
+        glVertex2f(-0.16f, 0.32f);    // x, y
+        glVertex2f(-0.20f, 0.32f);    // x, y
+        glVertex2f(-0.20f, 0.39f);    // x, y
+        glVertex2f(-0.16f, 0.38f);    // x, y
 
-    glEnd();
+        glEnd();
 
-    //3rd window- bottom left
-    glBegin(GL_QUADS);
-    glColor3ub(137, 184, 206);
+        //3rd window- mid right
+        glBegin(GL_QUADS);
+        glColor3ub(184, 124, 54);
 
-    glVertex2f(0.35f, 0.44f);    // x, y
-    glVertex2f(0.31f, 0.44f);    // x, y
-    glVertex2f(0.31f, 0.51f);    // x, y
-    glVertex2f(0.35f, 0.5f);    // x, y
+        glVertex2f(-0.11f, 0.41f);    // x, y
+        glVertex2f(-0.15f, 0.41f);    // x, y
+        glVertex2f(-0.15f, 0.49f);    // x, y
+        glVertex2f(-0.11f, 0.48);    // x, y
 
-    glEnd();
+        glEnd();
 
-    //4th window - bottom right
-    glBegin(GL_QUADS);
-    glColor3ub(137, 184, 206);
+        //4th window - mid left
+        glBegin(GL_QUADS);
+        glColor3ub(184, 124, 54);
 
-    glVertex2f(0.36f, 0.44f);    // x, y
-    glVertex2f(0.4f, 0.44f);    // x, y
-    glVertex2f(0.4f, 0.5f);    // x, y
-    glVertex2f(0.36f, 0.51f);    // x, y
+        glVertex2f(-0.16f, 0.41f);    // x, y
+        glVertex2f(-0.20f, 0.41f);    // x, y
+        glVertex2f(-0.20f, 0.49f);    // x, y
+        glVertex2f(-0.16f, 0.48f);    // x, y
 
-    glEnd();
+        glEnd();
 
-    //5th window - bottom left
-    glBegin(GL_QUADS);
-    glColor3ub(137, 184, 206);
+        //5th window - top right
+        glBegin(GL_QUADS);
+        glColor3ub(184, 124, 54);
 
-    glVertex2f(0.35f, 0.53f);    // x, y
-    glVertex2f(0.31f, 0.53f);    // x, y
-    glVertex2f(0.31f, 0.6f);    // x, y
-    glVertex2f(0.35f, 0.59f);    // x, y
+        glVertex2f(-0.11f, 0.52f);    // x, y
+        glVertex2f(-0.15f, 0.52f);    // x, y
+        glVertex2f(-0.15f, 0.60f);    // x, y
+        glVertex2f(-0.11f, 0.59f);    // x, y
 
-    glEnd();
+        glEnd();
 
-    //6th window - bottom right
-    glBegin(GL_QUADS);
-    glColor3ub(137, 184, 206);
+        //6th window - top left
+        glBegin(GL_QUADS);
+        glColor3ub(184, 124, 54);
 
-    glVertex2f(0.36f, 0.53f);    // x, y
-    glVertex2f(0.4f, 0.53f);    // x, y
-    glVertex2f(0.4f, 0.59f);    // x, y
-    glVertex2f(0.36f, 0.6f);    // x, y
+        glVertex2f(-0.16f, 0.52f);    // x, y
+        glVertex2f(-0.20f, 0.52f);    // x, y
+        glVertex2f(-0.20f, 0.60f);    // x, y
+        glVertex2f(-0.16f, 0.59f);    // x, y
 
-    glEnd();
-
+        glEnd();
     //left side
     glBegin(GL_QUADS);
     glColor3ub(229,167,80);
@@ -403,74 +402,77 @@ void putAllHouses(){
     glEnd();
 
     //1st window- bottom left
-    glBegin(GL_QUADS);
-    glColor3ub(157, 167, 174);
+       glBegin(GL_QUADS);
+        glColor3ub(201, 140, 46);
 
-    glVertex2f(0.24f, 0.35f);    // x, y
-    glVertex2f(0.2f, 0.35f);    // x, y
-    glVertex2f(0.2f, 0.41f);    // x, y
-    glVertex2f(0.24f, 0.42f);    // x, y
+       glVertex2f(-0.31f, 0.32f);    // x, y
+       glVertex2f(-0.27f, 0.32f);    // x, y
+       glVertex2f(-0.27f, 0.40f);    // x, y
+       glVertex2f(-0.31f, 0.39f);    // x, y
 
-    glEnd();
+       glEnd();
 
-    //2nd window- bottom right
-    glBegin(GL_QUADS);
+       //2nd window- bottom right
+       glBegin(GL_QUADS);
 
-    glColor3ub(157, 167, 174);
+        glColor3ub(201, 140, 46);
 
-    glVertex2f(0.25f, 0.35f);    // x, y
-    glVertex2f(0.29f, 0.35f);    // x, y
-    glVertex2f(0.29f, 0.42f);    // x, y
-    glVertex2f(0.25f, 0.41f);    // x, y
+       glVertex2f(-0.22f, 0.32f);    // x, y
+       glVertex2f(-0.26f, 0.32f);    // x, y
+       glVertex2f(-0.26f, 0.40f);    // x, y
+       glVertex2f(-0.22f, 0.39f);    // x, y
 
-    glEnd();
+       glEnd();
 
-    //3rd window- bottom left
-    glBegin(GL_QUADS);
-    glColor3ub(157, 167, 174);
+       //3rd window- mid left
+       glBegin(GL_QUADS);
+        glColor3ub(201, 140, 46);
 
-    glVertex2f(0.24f, 0.44f);    // x, y
-    glVertex2f(0.2f, 0.44f);    // x, y
-    glVertex2f(0.2f, 0.5f);    // x, y
-    glVertex2f(0.24f, 0.51f);    // x, y
+       glVertex2f(-0.31f, 0.41f);    // x, y
+       glVertex2f(-0.27f, 0.41f);    // x, y
+       glVertex2f(-0.27f, 0.49f);    // x, y
+       glVertex2f(-0.31f, 0.48f);    // x, y
 
-    glEnd();
+       glEnd();
 
-    //4th window - bottom right
-    glBegin(GL_QUADS);
-    glColor3ub(157, 167, 174);
+       //4th window - mid right
+          glBegin(GL_QUADS);
 
-    glVertex2f(0.25f, 0.44f);    // x, y
-    glVertex2f(0.29f, 0.44f);    // x, y
-    glVertex2f(0.29f, 0.51f);    // x, y
-    glVertex2f(0.25f, 0.5f);    // x, y
+        glColor3ub(201, 140, 46);
 
-    glEnd();
+       glVertex2f(-0.22f, 0.41f);    // x, y
+       glVertex2f(-0.26f, 0.41f);    // x, y
+       glVertex2f(-0.26f, 0.49f);    // x, y
+       glVertex2f(-0.22f, 0.48f);    // x, y
 
-    //5th window - bottom left
-    glBegin(GL_QUADS);
-    glColor3ub(157, 167, 174);
+       glEnd();
 
-    glVertex2f(0.24f, 0.53f);    // x, y
-    glVertex2f(0.2f, 0.53f);    // x, y
-    glVertex2f(0.2f, 0.59f);    // x, y
-    glVertex2f(0.24f, 0.6f);    // x, y
+       //5th window - top left
+       glBegin(GL_QUADS);
+       glColor3ub(201, 140, 46);
 
-    glEnd();
+       glVertex2f(-0.31f, 0.52f);    // x, y
+       glVertex2f(-0.27f, 0.52f);    // x, y
+       glVertex2f(-0.27f, 0.60f);    // x, y
+       glVertex2f(-0.31f, 0.59f);    // x, y
 
-    //6th window - bottom right
-    glBegin(GL_QUADS);
-    glColor3ub(157, 167, 174);
-
-    glVertex2f(0.25f, 0.53f);    // x, y
-    glVertex2f(0.29f, 0.53f);    // x, y
-    glVertex2f(0.29f, 0.6f);    // x, y
-    glVertex2f(0.25f, 0.59f);    // x, y
-
-    glEnd();
+       glEnd();
 
 
-    //5th house
+       //6th window - top right
+          glBegin(GL_QUADS);
+
+       glColor3ub(201, 140, 46);
+
+       glVertex2f(-0.22f, 0.52f);    // x, y
+       glVertex2f(-0.26f, 0.52f);    // x, y
+       glVertex2f(-0.26f, 0.60f);    // x, y
+       glVertex2f(-0.22f, 0.59f);    // x, y
+
+       glEnd();
+
+
+    //4th house
     //left side
     glBegin(GL_QUADS);
     glColor3ub(225, 192, 201);
@@ -508,7 +510,7 @@ void putAllHouses(){
     glEnd();
 
     //3rd window
-    // bottom left
+    // top left
     glBegin(GL_QUADS);
     glColor3ub(0, 0, 0);
 
@@ -521,7 +523,7 @@ void putAllHouses(){
 
 
     //4th window
-    // bottom right
+    // top right
     glBegin(GL_QUADS);
     glColor3ub(0, 0, 0);
 
@@ -582,7 +584,7 @@ void putAllHouses(){
     glEnd();
 
     //4th window
-    //bottom right
+    //top right
 
     glBegin(GL_QUADS);
     glColor3ub(0, 0, 0);
@@ -595,7 +597,7 @@ void putAllHouses(){
 
 
 
-    //last er ager house
+    //5th house
     //right side
     glBegin(GL_QUADS);
     glColor3ub(239,228,194);
@@ -630,7 +632,7 @@ void putAllHouses(){
 
     glEnd();
 
-    //3rd window- bottom left
+    //3rd window- mid left
     glBegin(GL_QUADS);
     glColor3ub(137, 184, 206);
 
@@ -641,7 +643,7 @@ void putAllHouses(){
 
     glEnd();
 
-    //4th window - bottom right
+    //4th window - mid right
     glBegin(GL_QUADS);
     glColor3ub(137, 184, 206);
 
@@ -652,7 +654,7 @@ void putAllHouses(){
 
     glEnd();
 
-    //5th window - bottom left
+    //5th window - top left
     glBegin(GL_QUADS);
     glColor3ub(137, 184, 206);
 
@@ -663,7 +665,7 @@ void putAllHouses(){
 
     glEnd();
 
-    //6th window - bottom right
+    //6th window - top right
     glBegin(GL_QUADS);
     glColor3ub(137, 184, 206);
 
@@ -708,7 +710,7 @@ void putAllHouses(){
 
     glEnd();
 
-    //3rd window- bottom left
+    //3rd window- mid left
     glBegin(GL_QUADS);
     glColor3ub(157, 167, 174);
 
@@ -719,7 +721,7 @@ void putAllHouses(){
 
     glEnd();
 
-    //4th window - bottom right
+    //4th window - mid right
     glBegin(GL_QUADS);
     glColor3ub(157, 167, 174);
 
@@ -730,7 +732,7 @@ void putAllHouses(){
 
     glEnd();
 
-    //5th window - bottom left
+    //5th window - top left
     glBegin(GL_QUADS);
     glColor3ub(157, 167, 174);
 
@@ -741,7 +743,7 @@ void putAllHouses(){
 
     glEnd();
 
-    //6th window - bottom right
+    //6th window - top right
     glBegin(GL_QUADS);
     glColor3ub(157, 167, 174);
 
@@ -753,7 +755,7 @@ void putAllHouses(){
     glEnd();
 
 
-    //last house
+    //6th house
     //right side
     glBegin(GL_QUADS);
     glColor3ub(195,191,175);
@@ -765,7 +767,7 @@ void putAllHouses(){
 
     glEnd();
 
-    //1st window- bottom left
+    //1st window- bottom right
     glBegin(GL_QUADS);
     glColor3ub(157, 167, 174);
 
@@ -776,7 +778,7 @@ void putAllHouses(){
 
     glEnd();
 
-    //2nd window- bottom right
+    //2nd window- bottom left
     glBegin(GL_QUADS);
 
     glColor3ub(157, 167, 174);
@@ -788,7 +790,7 @@ void putAllHouses(){
 
     glEnd();
 
-    //3rd window- bottom left
+    //3rd window- top right
     glBegin(GL_QUADS);
     glColor3ub(157, 167, 174);
 
@@ -799,7 +801,7 @@ void putAllHouses(){
 
     glEnd();
 
-    //4th window - bottom right
+    //4th window - top left
     glBegin(GL_QUADS);
     glColor3ub(157, 167, 174);
 
@@ -844,7 +846,7 @@ void putAllHouses(){
 
     glEnd();
 
-    //3rd window- bottom left
+    //3rd window- top left
     glBegin(GL_QUADS);
     glColor3ub(157, 167, 174);
 
@@ -855,7 +857,7 @@ void putAllHouses(){
 
     glEnd();
 
-    //4th window - bottom right
+    //4th window - top right
     glBegin(GL_QUADS);
     glColor3ub(157, 167, 174);
 
