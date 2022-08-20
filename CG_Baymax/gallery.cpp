@@ -44,7 +44,7 @@ void putGallery(){
     //seat
     //1st row
     glBegin(GL_QUADS);
-    glColor3ub(0,0,200);
+    glColor3ub(93,154,217);
 
     glVertex2f(-0.98f, -0.55f);    // x, y
     glVertex2f(-0.92f, -0.55f);  // x, y
@@ -55,7 +55,7 @@ void putGallery(){
     
     //2nd row
     glBegin(GL_QUADS);
-    glColor3ub(0,100,220);
+    glColor3ub(193,83,79);
 
     glVertex2f(-1.f, -0.49f);    // x, y
     glVertex2f(-0.96f, -0.51f);    // x, y
@@ -66,7 +66,7 @@ void putGallery(){
     
     //3rd row
     glBegin(GL_QUADS);
-    glColor3ub(0,200,220);
+    glColor3ub(111,84,155);
 
     glVertex2f(-1.0f, -0.39f);    // x, y
     glVertex2f(-1.0f,-0.49f);    // x, y
